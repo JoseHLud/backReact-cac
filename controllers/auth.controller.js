@@ -1,5 +1,5 @@
-const userModel = require('../model/user.model');
-const { encrypt, compare, generateToken } = require('../utils/index')
+const userModel = require('../models/user.model');
+const { encrypt, compare, generateToken } = require('../utils')
 
 const authController = {
     register: async (req, res) => {
@@ -46,6 +46,7 @@ const authController = {
     });
     return;
     },
+    
     login: async (req, res) => {
          // validar email y password
    const {email, password} = req.body

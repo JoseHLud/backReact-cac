@@ -1,4 +1,4 @@
-const database = require('../storage/index');
+const database = require('../storages/index');
 const User = require('./schemas/user.schema');
 
 const userModel = {
