@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
-const userModel = require('./model/user.model');
-const middleTest = require('./middleware/index');
+const userModel = require('./models/user.model');
+const middleTest = require('./middlewares/index');
 const res = require('express/lib/response');
 const { encrypt, compare, tokenValidator, generateToken } = require('./utils');
 const jwt = require('jsonwebtoken');
@@ -11,7 +11,7 @@ const userRoutes = require('./routes/user.routes');
 const app = express();
 const port = process.env.PORT || 5000;
 
-require('./storage/connection');
+require('./storages/connection');
 
 // Middlewares
 app.use(cors());

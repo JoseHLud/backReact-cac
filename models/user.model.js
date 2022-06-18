@@ -28,7 +28,8 @@ const userModel = {
       return users;
     },
     getUserByEmail: (email) => {
-        const user = database.users.find((user) => user.email === email);
+        const user = User.findOne({ email });
+        // database.users.find((user) => user.email === email);
         return user;
     },
   };

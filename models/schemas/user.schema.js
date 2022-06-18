@@ -3,8 +3,15 @@ const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
 
-    email: String,
-    password: String,
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
     // pet: {
     //     type: Schema.types.objectId,
     //     ref: 'Pet'
